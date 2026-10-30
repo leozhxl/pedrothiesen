@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Batizado e Celebracoes">
+  <defs>
+    <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7F4F0"/>
+      <stop offset="100%" stop-color="#DFD6C9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#gb)"/>
+  <circle cx="1420" cy="430" r="300" fill="#ffffff" opacity="0.5"/>
+  <circle cx="1420" cy="430" r="300" fill="none" stroke="#B37D55" stroke-width="4"/>
+  <path d="M1180 760 q240 -300 480 0" fill="none" stroke="#B37D55" stroke-width="5" opacity="0.7"/>
+  <text x="1420" y="950" font-family="Georgia, serif" font-size="52" fill="#303030" text-anchor="middle">Batizado e Celebracoes</text>
+  <text x="1420" y="1010" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="6" fill="#303030" opacity="0.45" text-anchor="middle">SUBSTITUA POR UMA FOTO REAL</text>
+</svg>

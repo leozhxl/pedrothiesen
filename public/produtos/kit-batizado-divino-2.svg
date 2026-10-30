@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img" aria-label="Kit Batizado - raios dourados">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF8F5"/>
+      <stop offset="100%" stop-color="#E4DCD1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#g)"/>
+  <circle cx="600" cy="520" r="250" fill="#ffffff" opacity="0.55"/>
+  <circle cx="600" cy="520" r="250" fill="none" stroke="#B4A797" stroke-width="3"/>
+  <path d="M470 600 q130 -170 260 0" fill="none" stroke="#B4A797" stroke-width="4" opacity="0.8"/>
+  <rect x="520" y="430" width="160" height="200" rx="14" fill="none" stroke="#B4A797" stroke-width="4"/>
+  <path d="M520 480 h160" stroke="#B4A797" stroke-width="4"/>
+  <path d="M600 430 v-40" stroke="#B4A797" stroke-width="4"/>
+  <circle cx="600" cy="380" r="16" fill="none" stroke="#B4A797" stroke-width="4"/>
+  <text x="600" y="880" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="10" fill="#B4A797" text-anchor="middle">FEITO A MAO</text>
+  <text x="600" y="689" font-family="Georgia, serif" font-size="46" fill="#303030" text-anchor="middle">Kit Batizado - raios</text>
+    <text x="600" y="751" font-family="Georgia, serif" font-size="46" fill="#303030" text-anchor="middle">dourados</text>
+  <text x="600" y="1420" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="6" fill="#303030" opacity="0.45" text-anchor="middle">SUBSTITUA POR UMA FOTO REAL</text>
+</svg>

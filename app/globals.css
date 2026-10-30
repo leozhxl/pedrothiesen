@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Tokens shadcn mapeados para a paleta do site de referência */
+    --background: 0 0% 100%; /* branco */
+    --foreground: 0 0% 19%; /* #303030 — texto (nunca preto puro) */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 19%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 19%;
+
+    --primary: 33 16% 65%; /* #B4A797 — taupe dos botões */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 37 20% 92%; /* #EFECE7 — bege das seções */
+    --secondary-foreground: 0 0% 19%;
+
+    --muted: 37 20% 95%;
+    --muted-foreground: 0 0% 57%; /* #919191 */
+
+    --accent: 24 36% 38%; /* #855B3F — marrom da marca */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 60% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%; /* #E6E6E6 */
+    --input: 0 0% 85%;
+    --ring: 33 16% 65%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    /* Fundo branco limpo, como no site de referência */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-normal tracking-tight;
+    text-wrap: balance;
+  }
+
+  /* Respeita quem pediu menos movimento no sistema */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Título de seção com o filete dourado característico da marca */
+  .section-eyebrow {
+    @apply mb-3 flex items-center justify-center gap-3 text-[11px] uppercase tracking-[0.3em] text-brand-brown;
+  }
+
+  .section-eyebrow::before,
+  .section-eyebrow::after {
+    content: "";
+    @apply h-[1px] w-8 bg-brand-brown/50;
+  }
+
+  .section-title {
+    @apply text-center font-serif text-3xl leading-tight text-brand-graphite sm:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-muted-foreground;
+  }
+
+  /* Link do menu com sublinhado que cresce no hover */
+  .nav-link {
+    @apply relative text-sm text-brand-graphite/80 transition-colors hover:text-brand-taupe;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 h-[1px] w-0 bg-brand-brown transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+/* Barra de rolagem discreta, no tom da marca */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8d1c8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b4a797;
+}
