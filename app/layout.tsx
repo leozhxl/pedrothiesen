@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Jost, Parisienne } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 import { TopBar } from "@/components/layout/top-bar";
@@ -12,26 +12,39 @@ import { site } from "@/lib/site";
 
 /* ─── Tipografia ────────────────────────────────────────────────────
    Títulos: serifada elegante · Corpo: sans-serif limpa
-   Script: apenas para a assinatura da marca                        */
-const display = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+   Script: apenas para a assinatura da marca
+
+   Fontes auto-hospedadas em app/fonts (subset latin, baixadas do
+   Google Fonts). Evita o download em tempo de build, que falhava
+   de forma intermitente e derrubava o deploy.                      */
+const display = localFont({
+  src: [
+    { path: "./fonts/cormorant-garamond-300.woff2", weight: "300", style: "normal" },
+    { path: "./fonts/cormorant-garamond-400.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/cormorant-garamond-500.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/cormorant-garamond-600.woff2", weight: "600", style: "normal" },
+  ],
   variable: "--font-display",
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
 
-const body = Jost({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
+const body = localFont({
+  src: [
+    { path: "./fonts/jost-300.woff2", weight: "300", style: "normal" },
+    { path: "./fonts/jost-400.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/jost-500.woff2", weight: "500", style: "normal" },
+  ],
   variable: "--font-body",
   display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
-const script = Parisienne({
-  subsets: ["latin"],
-  weight: "400",
+const script = localFont({
+  src: [{ path: "./fonts/parisienne-400.woff2", weight: "400", style: "normal" }],
   variable: "--font-script",
   display: "swap",
+  fallback: ["cursive"],
 });
 
 export const metadata: Metadata = {
